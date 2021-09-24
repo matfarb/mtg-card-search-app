@@ -1,0 +1,213 @@
+body {
+  height: 100vh;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+nav{
+  background-color: green, 0%;
+}
+
+.add-deck{
+  margin-left: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+li{
+  list-style: none;
+}
+
+.index-box{
+  display: flex;
+  height: 75vh;
+}
+
+.update-deck-name{
+  display: flex;
+  width: 25%;
+}
+
+#decks-list{
+  width: 25%;
+  overflow-y: auto;
+}
+
+#cards-list{
+  width: 25%;
+  overflow-y: auto;
+}
+
+.listed-deck{
+  display:flex;
+}
+
+.listed-card{
+  display:flex;
+  margin-bottom: 2px;
+}
+
+#card-name{
+  display: flex;
+  align-items: center;
+}
+
+a .card-show { 
+  position:relative;
+}
+
+a .card-show span {
+  position:absolute;
+  left:-9999px;
+  top:-9999px;
+  z-index:9999;
+}
+
+a:hover .card-show span { 
+  top: 20px; 
+  left:0;
+}
+
+.display-card{
+  height: 420px;
+  width: 300px;
+}
+
+#search-card{
+  width: 75%;
+}
+
+.colors{
+  margin: 5px;
+}
+
+.color-body{
+  display:flex;
+  justify-content: center;
+}
+
+.card-color{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mana-cost{
+  margin: 5px;
+  justify-content: center;
+}
+
+.mana-body{
+  display: flex;
+  justify-content: center;
+}
+
+.card-mana-cost{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  color: white;
+}
+
+h4{
+  text-align: center;
+  color: black;
+}
+
+h5{
+  color: white;
+}
+
+.container{
+  display: flex;
+  height: 75vh;
+  width: 80vw;
+}
+
+.decks{
+  height: 100%;
+  width: 50%;
+}
+
+.search-parameters{
+  display: flex;
+  flex-wrap:wrap;
+  overflow-x:auto;
+}
+
+.color-symbol{
+  height: 25px;
+  width: 25px;
+}
+
+.search-bar{
+  display: flex;
+
+}
+
+.color-mana{
+  display:flex;
+  justify-content: center;
+}
+
+.display-result{
+  height: 80%;
+  display:flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.card-result{
+  width: 300px;
+  height: 420px;
+}
+
+.types{
+  margin: 5px;
+}
+
+.types-body{
+  display:flex;
+  justify-content: center;
+}
+
+.card-types{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-button{
+  border-radius: 5%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

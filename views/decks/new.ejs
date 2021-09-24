@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/decks">Deck Builder App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/decks/new">Add a New Deck</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <h1>Deck Name</h1>
+    <div class= "index-box">
+      <div class="index-main" id="decks-list">
+        
+      </div>
+      
+      <div class="index-main" id= "search-card">
+        <form class="search-parameters" action="/decks/new/search" method="GET">
+          <div class="search-bar">
+            <input type="text" name="searchtext" class="form-control"
+                  placeholder="Search for cards">
+            <span class="input-group-btn">
+              <button class="btn btn-success" type="submit">Search</button>
+              </span>
+          </div>
+          <div class="color-mana">
+            <div class="colors">  
+              <div class="color-header">
+                <h4>Colour</h4>
+              </div>
+              <div class="color-body">
+                <div class="card-color" id="white">
+                  <img class="color-symbol" src= "/images/White.png">
+                  <input type="checkbox" name="color" value="W" checked>
+                </div>
+                <div class="card-color" id="blue">
+                  <img class="color-symbol" src= "/images/Blue.png">
+                  <input type="checkbox" name="color" value="U" checked>
+                </div>
+                <div class="card-color" id="black">
+                  <img class="color-symbol" src= "/images/black.png">
+                  <input type="checkbox" name="color" value="B" checked>
+                </div>
+                <div class="card-color" id="red">
+                  <img class="color-symbol" src= "/images/Red.png">
+                  <input type="checkbox" name="color" value="R" checked>
+                </div>
+                <div class="card-color" id="green">
+                  <img class="color-symbol" src= "/images/Green.png">
+                  <input type="checkbox" name="color" value="G" checked>
+                </div>
+              </div>  
+            </div>
+            
+            <div class="mana-cost">
+              <div class="mana-header">
+                <h4>Mana Cost</h4>
+              </div>
+              <div class="mana-body">
+                <div class="card-mana-cost" id="0">
+                  <input type="number" name="cmc" min=0 max=16>
+                </div>
+              </div>
+            </div>
+
+            <div class="types">
+              <div class="types-header">
+                <h4>Types</h4>
+              </div>
+              <div class="types-body">
+                <div class="card-types" id="creature">
+                  Creature
+                  <input type="checkbox" name="types" value="creature" checked>
+                </div>
+                <div class="card-types" id="instant">
+                  Instant
+                  <input type="checkbox" name="types" value="instant" checked>
+                </div>
+                <div class="card-types" id="sorcery">
+                  Sorcery
+                  <input type="checkbox" name="types" value="sorcery" checked>
+                </div>
+                <div class="card-types" id="enchantment">
+                  Enchantment
+                  <input type="checkbox" name="types" value="enchantment" checked>
+                </div>
+                <div class="card-types" id="land">
+                  Land
+                  <input type="checkbox" name="types" value="land" checked>
+                </div>
+                <div class="card-types" id="planeswalker">
+                  Planeswalker
+                  <input type="checkbox" name="types" value="planeswalker" checked>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="display-result">
+          <% if (results) { %>
+          <% results.forEach(function(r) { %>    
+            <img class="card-result" src= "<%= r.imageUrl %>" alt="<%= r.name %>">
+          <% }); %>
+          <% }else{ %>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
