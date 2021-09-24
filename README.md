@@ -7,7 +7,7 @@ This app will allow the user to search for Magic: the Gathering cards from a dat
 
 Technologies Used:
 
-HTML, CSS, JavaScript, Node.js, Express.js, MongoDB
+HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, Mongoose, Heroku
 
 User Stories:
 
